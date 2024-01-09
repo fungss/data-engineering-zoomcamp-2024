@@ -28,4 +28,5 @@ services:
       - pg-database
 
 networks:
-  pg-network:
+  pg-network: 
+    name: pg-network
