@@ -79,7 +79,21 @@ Answer: "Brooklyn" "Manhattan" "Queens"
 
 ## Question 6. Largest tip
 ```
-select distinct "Borough"
-from taxi_zones zones
+with max_tip_amount_by_dolocation as (
+	select zones."Zone", trips."DOLocationID", max(trips."tip_amount"::numeric) as max_tip_amount_by_dolocation
+	-- select *
+	from green_taxi_trips trips
+	left join taxi_zones zones
+	on trips."PULocationID" = zones."LocationID"
+	where extract(year from trips.lpep_pickup_datetime)::text = '2019'
+	and extract(month from trips.lpep_pickup_datetime)::text = '9'
+	and zones."Zone" = 'Astoria'
+	group by zones."Zone", trips."DOLocationID"
+)
+select zones."Zone", max_tip_amount_by_dolocation
+from max_tip_amount_by_dolocation
+left join taxi_zones zones
+on max_tip_amount_by_dolocation."DOLocationID" = zones."LocationID"
+order by max_tip_amount_by_dolocation desc
 ```
-Answer: There is no zone named Astoria
+Answer: JFK Airport
