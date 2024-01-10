@@ -1,12 +1,12 @@
 # Module 1 Homework - Ronald Fung
 
-## Question 1
+## Question 1. Knowing docker tags
 ```
 docker run --help | grep "Automatically remove the container when it exits"
 ```
 Answer: --rm
 
-## Question 2
+## Question 2. Understanding docker first run
 ```
 docker run -it --entrypoint=bash python:3.9
 pip list | grep "wheel"
@@ -14,7 +14,6 @@ pip list | grep "wheel"
 Answer: 0.42.0
 
 ## Data preparation for the remaining questions
-
 ```
 docker run -it \
     --network=pg-network \
@@ -41,5 +40,46 @@ docker run -it \
     --target_url="https://s3.amazonaws.com/nyc-tlc/misc/taxi+_zone_lookup.csv"
 ```
 
-## Question 3
+## Question 3. Count records
+```
+select count(*)
+from green_taxi_trips
+where lpep_pickup_datetime::date = date '2019-09-18' 
+and lpep_dropoff_datetime::date = date '2019-09-18'
+```
+Answer: 15612
 
+## Question 4. Largest trip for each day
+```
+select lpep_pickup_datetime::date, max(trip_distance::numeric)
+from green_taxi_trips
+where lpep_pickup_datetime::date in ('2019-09-18'::date, '2019-09-16'::date, '2019-09-26'::date, '2019-09-21'::date)
+group by lpep_pickup_datetime::date
+order by max(trip_distance::numeric) DESC
+```
+Answer: 2019-09-26
+
+## Question 5. The number of passengers
+```
+with total_amount_by_borough AS (
+	select zones."Borough", SUM(trips.total_amount::numeric) as borough_total
+	from green_taxi_trips trips
+	left join taxi_zones zones
+	on trips."PULocationID" = zones."LocationID"
+	where zones."Borough" != 'Unknown'
+	and trips.lpep_pickup_datetime::date = '2019-09-18'::date
+	group by zones."Borough"
+)
+select *
+from total_amount_by_borough
+where borough_total > 50000
+order by borough_total desc
+```
+Answer: "Brooklyn" "Manhattan" "Queens"
+
+## Question 6. Largest tip
+```
+select distinct "Borough"
+from taxi_zones zones
+```
+Answer: There is no zone named Astoria
