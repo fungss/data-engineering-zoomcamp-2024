@@ -1,5 +1,11 @@
 # Module 1 Homework - Ronald Fung
 
+## Instruction
+Assuming the required software are installed, run the below command to spin up pg-database and pg-admin
+```
+docker compose up -d
+```
+
 ## Question 1. Knowing docker tags
 ```
 docker run --help | grep "Automatically remove the container when it exits"
