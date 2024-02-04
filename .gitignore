@@ -7,3 +7,4 @@ data/
 setup.cfg
 __ss/
 **/mage_data/
+.DS_Store
