@@ -105,5 +105,3 @@ on max_tip_amount_by_dolocation."DOLocationID" = zones."LocationID"
 order by max_tip_amount_by_dolocation desc
 ```
 Answer: JFK Airport
-
-<div align=”center”>**END**</div>

@@ -1,5 +1,4 @@
 # Module 2 - Workflow Orchestration
-- mage as orchestration tool
 - ETL with mage
 - Using PyArrow to partition result dataframe and upload to gcs (Google Cloud Storage) bucket in parquet format
 
@@ -22,5 +21,3 @@ Answer: 4
 
 ## Question 6. Data Exporting
 Answer: 96 (Supposed to be 95. Was adviced to select the closet answer.)
-
-<div align=”center”>**END**</div>
