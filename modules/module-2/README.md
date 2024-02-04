@@ -1,4 +1,9 @@
-# Module 2 Homework - Ronald Fung
+# Module 2 - Workflow Orchestration
+- mage as orchestration tool
+- ETL with mage
+- Using PyArrow to partition result dataframe and upload to gcs (Google Cloud Storage) bucket in parquet format
+
+Questions of the assignment can be found [here](https://github.com/fungss/data-engineering-zoomcamp-2024/blob/main/modules/module-2/homework.md).
 
 ## Question 1. Data Loading
 Answer: 266,855 rows x 20 columns

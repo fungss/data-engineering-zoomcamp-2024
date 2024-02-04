@@ -1,10 +1,9 @@
-# Module 1 Homework - Ronald Fung
+# Module 1 - Docker and Postgres
+- Parametrize and dockerize ingestion script
+- Docker networking and port mapping
+- Cloud provision with Terraform
 
-## Instruction
-1. Run the below command in the project directory to spin up pg-database and pg-admin
-```
-docker compose up -d
-```
+Questions of the assignment can be found [here](https://github.com/fungss/data-engineering-zoomcamp-2024/blob/main/modules/module-1/homework.md).
 
 ## Question 1. Knowing docker tags
 ```
@@ -19,7 +18,10 @@ pip list | grep "wheel"
 ```
 Answer: 0.42.0
 
-## Data preparation for the remaining questions
+## Preparation for the remaining questions
+The commands below will extract and load the following data to pg-database:
+1. green_tripdata_2019-09.csv, and
+2. taxi+_zone_lookup.csv
 ```
 docker run -it \
     --network=pg-network \
@@ -103,3 +105,5 @@ on max_tip_amount_by_dolocation."DOLocationID" = zones."LocationID"
 order by max_tip_amount_by_dolocation desc
 ```
 Answer: JFK Airport
+
+**<center>END</center>**
