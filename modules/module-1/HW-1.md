@@ -1,7 +1,7 @@
 # Module 1 Homework - Ronald Fung
 
 ## Instruction
-Assuming the required software are installed, run the below command to spin up pg-database and pg-admin
+1. Run the below command in the project directory to spin up pg-database and pg-admin
 ```
 docker compose up -d
 ```

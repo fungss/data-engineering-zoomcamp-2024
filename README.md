@@ -7,3 +7,6 @@ Docker, Terraform, GCP, Mage, BigQuery, dbt, Spark, Kafka, dlt, RisingWave
 
 ### Skills
 Cloud Provisioning, Data Warehousing, Analytics Engineering, Batch Processing, Data Streaming
+
+### Key Concept introduced
+IaC, Containerization, Data Lake, 

@@ -5,3 +5,5 @@ venv/
 dtc_postgres_volume_local/
 data/
 setup.cfg
+__ss/
+**/mage_data/
