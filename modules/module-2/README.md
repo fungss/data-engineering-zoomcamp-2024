@@ -23,4 +23,4 @@ Answer: 4
 ## Question 6. Data Exporting
 Answer: 96 (Supposed to be 95. Was adviced to select the closet answer.)
 
-**<center>END</center>**
+<div align=”center”>**END**</div>

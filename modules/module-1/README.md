@@ -106,4 +106,4 @@ order by max_tip_amount_by_dolocation desc
 ```
 Answer: JFK Airport
 
-**<center>END</center>**
+<div align=”center”>**END**</div>
