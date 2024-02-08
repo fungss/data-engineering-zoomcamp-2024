@@ -2,7 +2,12 @@
 - ETL with mage
 - Using PyArrow to partition result dataframe and upload to gcs (Google Cloud Storage) bucket in parquet format
 
-Questions of the assignment can be found [here](https://github.com/fungss/data-engineering-zoomcamp-2024/blob/main/modules/module-2/homework.md).
+## Setup
+1. Provision gcs and related resources with the terraform files
+2. ```docker compose --env-file=./dev.env -d``` to spin up mage server locally
+
+## Assignment
+Questions of the assignment can be found [here](https://github.com/fungss/data-engineering-zoomcamp-2024/blob/main/modules/02-workflow-orchestration/homework.md).
 
 ## Question 1. Data Loading
 Answer: 266,855 rows x 20 columns

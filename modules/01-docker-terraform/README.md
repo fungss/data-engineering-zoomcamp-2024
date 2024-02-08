@@ -3,7 +3,7 @@
 - Docker networking and port mapping
 - Cloud provision with Terraform
 
-Questions of the assignment can be found [here](https://github.com/fungss/data-engineering-zoomcamp-2024/blob/main/modules/module-1/homework.md).
+Questions of the assignment can be found [here](https://github.com/fungss/data-engineering-zoomcamp-2024/blob/main/modules/01-docker-terraform/homework.md).
 
 ## Question 1. Knowing docker tags
 ```
