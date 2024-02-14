@@ -58,17 +58,11 @@ def people_2():
 ```
 generators_pipeline = dlt.pipeline(destination='duckdb', dataset_name='generators')
 
-info = generators_pipeline.run(
-                            people_1(),
-                            table_name="people",
-							write_disposition="replace")
+info = generators_pipeline.run(people_1(),table_name="people",write_disposition="replace")
 
 print(info)
 
-info = generators_pipeline.run(
-                            people_2(),
-							table_name="people",
-							write_disposition="append")
+info = generators_pipeline.run(people_2(),table_name="people",write_disposition="append")
 
 print(info)
 
@@ -80,16 +74,11 @@ Answer: A: 353
 ```
 generators_pipeline = dlt.pipeline(destination='duckdb', dataset_name='generators')
 
-info = generators_pipeline.run(people_1(),
-										table_name="people",
-										write_disposition="replace")
+info = generators_pipeline.run(people_1(),table_name="people",write_disposition="replace")
 
 print(info)
 
-info = generators_pipeline.run(people_2(),
-										table_name="people",
-										write_disposition="merge",
-                    primary_key="id")
+info = generators_pipeline.run(people_2(),table_name="people",write_disposition="merge",primary_key="id")
 
 print(info)
 
