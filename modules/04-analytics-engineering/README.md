@@ -3,8 +3,17 @@
 - 
 - 
 
+## TODO
+1. re-work everything in cloud
+2. add ER-diagram
+
 ## Notes
-1. 
+1. dbt is a transformation tool that facilitates software engineering best practices like modularity, portability, CI/CD, and documentation.
+2. Views
+ - abstract complex joins from user
+ - limit degree of exposure - avoid giving table level permissions and faciliate hiding of PII info
+ - allow changing logic and behavior without changing the output structure
+ - In dbt, materialized view automatically updates, while table does not.
 
 ## Assignment
 Questions can be found [here](https://github.com/fungss/data-engineering-zoomcamp-2024/blob/main/modules/04-analytics-engineering/homework.md).
@@ -60,4 +69,18 @@ WHERE lpep_pickup_date BETWEEN '2022-06-01' AND '2022-06-30'
 Answer: 12.82 MB for non-partitioned table and 1.12 MB for the partitioned table
 
 ## Reference
-1. 
+1. [SQL Tables and Views: What's the Difference?](https://youtu.be/eumDqVqaCT4?si=lN2-CONmXa_kEDHc)
+
+2. [When to use a View instead of a Table?](https://stackoverflow.com/questions/4378068/when-to-use-a-view-instead-of-a-table)
+
+3. [Chapt-07: Using Docker Volumes in a Dockerfile to Manage Data Persistence](https://medium.com/@maheshwar.ramkrushna/docker-volume-7f9d0069f068)
+
+4. [jeremyyeo/dbt-docker-m1](https://github.com/jeremyyeo/dbt-docker-m1/blob/master/Dockerfile)
+
+5. [Python models](https://docs.getdbt.com/docs/build/python-models)
+
+6. [Anything one should know before going for self-hosted dbt?](https://www.reddit.com/r/dataengineering/comments/14w832y/anything_one_should_know_before_going_for/)
+
+7. [Materialized View vs Table Using dbt](https://stackoverflow.com/questions/64489772/materialized-view-vs-table-using-dbt#:~:text=If%20you%20have%20a%20DBT,the%20table%20by%20scheduling%20DBT.)
+
+8. [Materializations](https://docs.getdbt.com/docs/build/materializations)

@@ -1,7 +1,7 @@
 credentials/
+.credentials/
 .terraform*
 terraform.*
-venv/
 dtc_postgres_volume_local/
 data/
 setup.cfg
