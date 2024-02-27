@@ -1,2 +1,2 @@
-**/*.py linguist-language=Python
-**/*.tf linguist-language=Terraform
+modules/** linguist-documentation=false
+modules/** linguist-vendored
