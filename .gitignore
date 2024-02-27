@@ -8,4 +8,10 @@ setup.cfg
 __ss/
 **/mage_data/
 .DS_Store
+<<<<<<< HEAD
 **/package-lock.yml
+=======
+target/
+dbt_packages/
+logs/
+>>>>>>> parent of 4589e07 (Add answers to module 4 assignment)
