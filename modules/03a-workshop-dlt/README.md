@@ -1,7 +1,11 @@
 # Workshop - Data Load Tool (dlt)
+- Use of Python Generators for incremental loading
+
 
 ## Notes
-1. 
+1. Generators handle element one at a time. It avoids loading the whole dataset in-memory, thus more memory efficient.
+2. Python list stores pointers. Numpy array stores values in block - solved problem of memory fragmentation.
+3. Map() is memory-efficient than applying the function with normal for-loop because it will not create copies of the original data and it will perform the transformation lazily (when the result is called)
 
 ## Assignment
 Questions can be found [here](https://github.com/fungss/data-engineering-zoomcamp-2024/blob/main/modules/03a-workshop-dlt/dlt.md).
@@ -96,3 +100,5 @@ Answer: B: 266
 4. [Incremental processing for Heavy Bulk API and DML use cases](https://help.salesforce.com/s/articleView?id=000382007&type=1)
 
 5. [sObject Get Updated](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_getupdated.htm)
+
+6. [Python Code Optimization](https://youtu.be/LI5O6rfe7zI?si=Bke_Qc7MQEsRHvdJ)

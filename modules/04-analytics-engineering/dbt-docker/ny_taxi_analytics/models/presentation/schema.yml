@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: core
+    database: dtc-de-course-410021
+    schema: core
+
+    tables:
+      - name: fct_trips

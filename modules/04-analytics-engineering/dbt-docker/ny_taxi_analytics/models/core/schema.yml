@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: staging
+    database: dtc-de-course-410021
+    schema: staging
+
+    tables:
+      - name: stg_green_tripdata
+      - name: stg_yellow_tripdata
+      - name: taxi_zone_lookup

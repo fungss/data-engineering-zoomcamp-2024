@@ -8,7 +8,7 @@ ny_taxi_analytics:
       location: "{{ env_var('GCP_BQ_LOCATION') }}"
       method: service-account
       priority: interactive
-      project: "{{ env_var('GCP_BQ_PROJECT') }}"
+      project: "{{ env_var('GCP_PROJECT') }}"
       threads: 4
       type: bigquery
   target: dev
