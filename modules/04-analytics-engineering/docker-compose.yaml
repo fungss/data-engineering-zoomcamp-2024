@@ -3,7 +3,7 @@ services:
   dbt-bq:
     build:
       context: .
-      target: dbt-bigquery
+      # target: dbt-bigquery
     image: dbt/bigquery
     env_file:
       - dev.env
@@ -14,4 +14,5 @@ services:
       - ./dbt-docker/ny_taxi_analytics/:/usr/app/
       - ./.dbt/:/root/.dbt/
       - ./.credentials/dtc-de-course-410021-60ea3845a080.json:/.google/credentials/google_credentials.json
-    network_mode: host
+    ports:
+      - 8080:8080

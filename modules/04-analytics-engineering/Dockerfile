@@ -1,4 +1,4 @@
-FROM python:3.9.9-slim-bullseye as base
+FROM python:3.10-slim-bullseye
 
 # System setup
 RUN apt-get update \
@@ -23,20 +23,12 @@ ENV LANG=C.UTF-8
 
 # Update python
 RUN python -m pip install --upgrade pip setuptools wheel --no-cache-dir
-RUN python -m pip install pytz
+RUN python -m pip install --no-cache-dir dbt-core
+RUN python -m pip install --no-cache-dir dbt-bigquery
+RUN python -m pip install --no-cache-dir dbterd
 
 # Set docker basics
 WORKDIR /usr/app/
+COPY ./dbt-docker/ny_taxi_analytics/ /usr/app/
+# VOLUME /usr/app/
 ENTRYPOINT ["dbt"]
-
-##
-# dbt-core
-##
-FROM base as dbt-core
-RUN python -m pip install --no-cache-dir dbt-core
-
-##
-# dbt-bigquery
-##
-FROM base as dbt-bigquery
-RUN python -m pip install --no-cache-dir dbt-bigquery
