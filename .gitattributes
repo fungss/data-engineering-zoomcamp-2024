@@ -1,2 +1,2 @@
-*.py linguist-language=Python
-*.tf linguist-language=Terraform
+**/*.py linguist-language=Python
+**/*.tf linguist-language=Terraform
