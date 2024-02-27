@@ -1,2 +1,2 @@
 modules/** linguist-documentation=false
-modules/** linguist-vendored
+modules/** linguist-vendored=false
