@@ -12,3 +12,5 @@ target/
 dbt_packages/
 logs/
 **/package-lock.yml
+**/bucket/
+**/venv/

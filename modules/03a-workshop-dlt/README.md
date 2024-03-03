@@ -1,7 +1,6 @@
 # Workshop - Data Load Tool (dlt)
 - Use of Python Generators for incremental loading
 
-
 ## Notes
 1. Generators handle element one at a time. It avoids loading the whole dataset in-memory, thus more memory efficient.
 2. Python list stores pointers. Numpy array stores values in block - solved problem of memory fragmentation.
